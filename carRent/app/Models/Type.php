@@ -9,4 +9,8 @@ class Type extends Model
 {
     use HasFactory;
     protected $fillable=['id','name']; 
+
+    public function car(){
+        return $this->hasMany('App\Models\Car');
+    }
 }
