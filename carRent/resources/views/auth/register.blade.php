@@ -26,6 +26,34 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="ic" class="col-md-4 col-form-label text-md-right">{{ __('IC number') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="ic" type="text" class="form-control @error('ic') is-invalid @enderror" name="ic" value="{{ old('ic') }}" required autocomplete="ic" autofocus>
+
+                                @error('ic')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="lic" class="col-md-4 col-form-label text-md-right">{{ __('Driver License number') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="lic" type="text" class="form-control @error('lic') is-invalid @enderror" name="lic" value="{{ old('lic') }}" required autocomplete="lic" autofocus>
+
+                                @error('lic')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
