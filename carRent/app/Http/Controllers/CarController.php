@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Models\Car; 
 use App\Models\Type;
+Use Session;
 
 class CarController extends Controller
 {
@@ -29,6 +30,8 @@ class CarController extends Controller
             'image'=>$imageName,
             
         ]);
+        Session::flash('success',"Car add succesful!");
+        return redirect()->route('showCar');       
        
     }
 

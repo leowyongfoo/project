@@ -31,6 +31,12 @@ Route::post('/updateCar', [App\Http\Controllers\CarController::class, 'update'])
 Route::get('/clientView', [App\Http\Controllers\CarController::class, 'clientView'])->name('clientView');
 Route::get('/carDetail/{id}', [App\Http\Controllers\CarController::class, 'viewCarDetail'])->name('car.detail');
 
+Route::post('/addMyCar', [App\Http\Controllers\MyCarController::class, 'add'])->name('add.to.car');
+Route::get('/myCar', [App\Http\Controllers\MyCarController::class, 'viewMyCar'])->name('my.car');
+Route::get('/viewMyCar', [App\Http\Controllers\MyCarController::class, 'viewMyCar'])->name('view.myCart'); 
+Route::get('/deleteMyCar/{id}', [App\Http\Controllers\MyCarController::class, 'delete'])->name('deleteMyCar');
+
+Route::post('/createorder', [App\Http\Controllers\OrderController::class, 'add'])->name('create.order');
 
 Auth::routes();
 

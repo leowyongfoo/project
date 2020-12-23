@@ -58,7 +58,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">My Cart</a> 
+                                    <a class="dropdown-item" href="{{ route('my.car') }}">My-Car</a> 
+
+                                    <a class="dropdown-item" href="{{ route('clientView') }}">Cars</a> 
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
