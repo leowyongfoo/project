@@ -16,7 +16,6 @@
                     <th>Image</th>
 		            <th>Name</th>
                     <th>Type</th>
-		            <th>Day Rented</th>
 		            <th>Price per day</th>
                     <th>Action</th>
 		        </tr>
@@ -33,7 +32,6 @@
 		                    </em>
 		                </td>
 		                <td>{{$car->typeID}}</td>
-                        <td>{{$car->dayRent}}</td>
                         <td>{{$car->price}}</td>
 		                <td>
 		                    <a href="{{ route('editCar', ['id' => $car->id]) }}" class="btn btn-warning"><i class="fas fa-edit">Edit</i></a> | 

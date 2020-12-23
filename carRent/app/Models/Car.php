@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Car extends Model
 {
     use HasFactory;
-    protected $fillable=['name','description','price','image','dayRent','typeID'];
+    protected $fillable=['name','description','price','image','typeID'];
 
     public function type(){
         return $this->belongsTo('App\Models\Type');

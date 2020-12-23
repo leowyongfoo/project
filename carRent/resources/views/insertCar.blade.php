@@ -26,11 +26,7 @@
                         <label for="price" class="label">Price</label>
                         <input type="number" name="price" id="Price">
                     </p>
-                    <p>
-                        <label for="dayRent" class="label">Day Rent</label>
-                        <input type="number" name="dayRent" id="dayRent">
-                    </p>
-
+                    
                     <p>
                         <input type="file" class="form-control" name="car-image" value="">
                     </p>

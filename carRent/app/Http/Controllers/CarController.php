@@ -26,7 +26,6 @@ class CarController extends Controller
             'description'=>$r->description,
             'typeID'=>$r->type,
             'price'=>$r->price,
-            'dayRent'=>$r->dayRent,
             'image'=>$imageName,
             
         ]);
@@ -65,7 +64,6 @@ class CarController extends Controller
         $cars->name=$r->name;
         $cars->description=$r->description;
         $cars->price=$r->price;
-        $cars->dayRent=$r->dayRent;
         $cars->typeID=$r->type;
         $cars->save();
         return redirect()->route('showCar');
@@ -75,6 +73,14 @@ class CarController extends Controller
         $cars=Car::paginate(3);
         
         return view('clientView')->with('cars',$cars);
+    }
+
+    public function viewCarDetail($id){
+       
+        $cars =Car::all()->where('id',$id);
+        
+        return view('carDetail')->with('cars',$cars)
+                                ->with('types',Type::all());
     }
 
     

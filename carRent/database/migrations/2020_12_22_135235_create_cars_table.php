@@ -19,7 +19,6 @@ class CreateCarsTable extends Migration
             $table->string('description');
             $table->double('price',8,2);
             $table->string('image');
-            $table->integer('dayRent')->unsigned();
             $table->string('typeID');
             $table->timestamps();
         });

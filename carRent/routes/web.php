@@ -29,6 +29,7 @@ Route::get('/deleteCar/{id}', [App\Http\Controllers\CarController::class, 'delet
 Route::get('/editCar/{id}', [App\Http\Controllers\CarController::class, 'edit'])->name('editCar');
 Route::post('/updateCar', [App\Http\Controllers\CarController::class, 'update'])->name('updateCar');
 Route::get('/clientView', [App\Http\Controllers\CarController::class, 'clientView'])->name('clientView');
+Route::get('/carDetail/{id}', [App\Http\Controllers\CarController::class, 'viewCarDetail'])->name('car.detail');
 
 
 Auth::routes();
