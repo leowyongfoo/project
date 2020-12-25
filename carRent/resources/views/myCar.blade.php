@@ -28,7 +28,7 @@ function TotalAmount() {
 
 <div class="container">
 	    <div class="row">
-        <form   method="post" action="#" >
+        <form   method="post" action="{{ route('create.order') }}" >
             @csrf
 		    <table class="table table-hover table-striped">
 		        <thead>

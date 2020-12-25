@@ -31,21 +31,21 @@ class OrderController extends Controller
             $mycars->save();
         }
         
-        Session::flash('success',"Order succesful!");        
+       
         Return redirect()->route('my.order'); 
         
     }
 
-   /* public function show(){
+    public function viewOrder(){
 
-        $myorders=DB::table('my_orders')
-        ->leftjoin('my_carts', 'my_orders.id', '=', 'my_carts.orderID')
-        ->leftjoin('products', 'products.id', '=', 'my_carts.productID')
-        ->select('my_carts.*','my_orders.*','products.*','my_carts.quantity as qty')
-        ->where('my_orders.userID','=',Auth::id())
+        $myorders=DB::table('orders')
+        ->leftjoin('my_cars', 'orders.id', '=', 'my_cars.orderID')
+        ->leftjoin('cars', 'cars.id', '=', 'my_cars.carID')
+        ->select('my_cars.*','orders.*','cars.*','my_cars.dayRented as carRented')
+        ->where('orders.userID','=',Auth::id())
         ->get();
         //->paginate(3);       
         return view('myOrder')->with('myorders',$myorders);
-    }*/
+    }
 }
 

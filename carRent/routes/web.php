@@ -37,6 +37,10 @@ Route::get('/viewMyCar', [App\Http\Controllers\MyCarController::class, 'viewMyCa
 Route::get('/deleteMyCar/{id}', [App\Http\Controllers\MyCarController::class, 'delete'])->name('deleteMyCar');
 
 Route::post('/createorder', [App\Http\Controllers\OrderController::class, 'add'])->name('create.order');
+Route::get('/myorder', [App\Http\Controllers\OrderController::class, 'viewOrder'])->name('my.order');
+
+Route::post('/paypal', [App\Http\Controllers\PaymentController::class, 'payWithpaypal'])->name('paypal');
+Route::get('/status', [App\Http\Controllers\PaymentController::class, 'getPaymentStatus'])->name('status');
 
 Auth::routes();
 
