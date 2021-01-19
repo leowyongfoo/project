@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 //Tpye route
 Route::get('/insertType', [App\Http\Controllers\TypeController::class, 'create'])->name('addType');
 Route::post('/insertType/store', [App\Http\Controllers\TypeController::class, 'store'])->name('addType');
@@ -47,5 +48,4 @@ Route::post('/paypal', [App\Http\Controllers\PaymentController::class, 'payWithp
 Route::get('/status', [App\Http\Controllers\PaymentController::class, 'getPaymentStatus'])->name('status');
 
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

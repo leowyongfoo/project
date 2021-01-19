@@ -38,10 +38,7 @@
                         <label for="price" class="label">Price</label>
                         <input type="number" name="price" id="Price" value="{{$car->price}}">
                     </p>
-                    <p>
-                        <label for="quantity" class="label">Day Rented</label>
-                        <input type="number" name="dayRent" id="dayRent" value="{{$car->dayRent}}">
-                    </p>
+                    
 
                     <p>
                         <input type="file" class="form-control" name="car-image" value="">

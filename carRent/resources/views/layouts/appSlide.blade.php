@@ -31,8 +31,9 @@ ul li:hover
     text-decoration: none;
 }
 
-ul li ul li:hover {color: #666;}
 /*<!--------------------------------------------------- Nav ----------------------------------------------->*/
+
+
 </style>
 </head>
 <body>
@@ -73,16 +74,16 @@ ul li ul li:hover {color: #666;}
                         <div class="topnav">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li class="nav-item active">
-                                <a class="nav-link" Style="color: white;"href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" id="Home" Style="color: white;"href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" Style="color: white;" href="{{ route('clientView') }}">Car Rentals</a>
+                                <a class="nav-link" id="rentals" Style="color: white;" href="{{ route('clientView') }}">Car Rentals</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" Style="color: white;" href="{{ route('my.car') }}">Manage Rentals</a>
+                                <a class="nav-link" id="manage" Style="color: white;" href="{{ route('my.car') }}">Manage Rentals</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" Style="color: white;" href="{{ route('my.order') }}">Payment</a>
+                                <a class="nav-link" id="pay" Style="color: white;" href="{{ route('my.order') }}">Payment</a>
                             </li>
 
                             <li class="nav-item dropdown">
@@ -109,10 +110,49 @@ ul li ul li:hover {color: #666;}
             </div>
         </nav>
 
+        <!--------------------------------------------------- Slide Show(Start) ----------------------------------------------->
 
+        <body class="antialiased" style="background-color: black">
+    <div class="container-fluid" >
+   <div class="row1" Style="margin-left: -15px ">
+     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" margin="auto" Style = "width: 101%; max-width: 1920px;">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="3000">
+           <img src="images/banner1.jpg" class="d-block w-100" alt="..." height="600px">
+         </div>
+          <div class="carousel-item"  data-interval="3000">
+            <img src="images/banner2.jpg" class="d-block w-100" alt="..." height="600px">
+         </div>
+          <div class="carousel-item" data-interval="4000">
+              <img src="images/banner3.jpg" class="d-block w-100" alt="..." height="600px">
+          </div>
+          <div class="carousel-item" data-interval="4000">
+              <img src="images/banner4.jpg" class="d-block w-100" alt="..." height="600px">
+          </div>
+         </div>
+          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+           </a>
+          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+
+          
+       </div>
+     </div>
+
+     <!--------------------------------------------------- Slide Show(End) ----------------------------------------------->
+    
+     <!--------------------------------------------------- Side Menu(Start) ----------------------------------------------->
+    
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+    
+
+
 </body>
 </html>

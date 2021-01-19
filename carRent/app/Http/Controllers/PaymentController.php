@@ -55,7 +55,7 @@ class PaymentController extends Controller
 
         $item_1 = new Item();
 
-        $item_1->setName('Item 1') /** item name **/
+        $item_1->setName('Car 1') /** item name **/
             ->setCurrency('USD')
             ->setQuantity(1)
             ->setPrice($request->get('amount')); /** unit price **/

@@ -43,7 +43,8 @@ class orderPaid extends Notification
         return (new MailMessage)
                     ->line('Payment notice')
                     ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+                    ->line('Thank you for choosing us as your car rental platform!')
+                    ->line('Welcome again!');
     }
 
     /**
